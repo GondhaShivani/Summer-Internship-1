@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To-Do List</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 95vh;
+        background-color: black;
+        border: 4px solid white;
+      }
+
+      .container {
+        max-width: 400px;
+        width: 100%;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 10px;
+      }
+
+      li {
+        margin-bottom: 30px;
+        padding: 30px;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        color: #333;
+      }
+
+      li.completed {
+        background-color: #168f16;
+        color: #555;
+      }
+
+      input[type="text"] {
+        padding: 15px;
+        border-radius: 20px;
+        border: none;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        margin-left: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button {
+        margin-top: 10px;
+        margin-left: 140px;
+        padding: 20px 30px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #8dd78f;
+      }
+
+      h1 {
+        font-size: 80px;
+        font-weight: 600;
+        color: #4caf50;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>To-Do List</h1>
+      <input id="taskInput" type="text" placeholder="Enter a task" />
+      <button id="addButton">Add Task</button>
+      <ul id="taskList"></ul>
+
+      <script>
+        // Get references to the DOM elements
+        const taskInput = document.getElementById("taskInput");
+        const addButton = document.getElementById("addButton");
+        const taskList = document.getElementById("taskList");
+
+        // Event listener for adding a new task
+        addButton.addEventListener("click", function () {
+          const taskText = taskInput.value;
+          if (taskText.trim() !== "") {
+            const newTask = document.createElement("li");
+            newTask.textContent = taskText;
+            taskList.appendChild(newTask);
+            taskInput.value = "";
+          }
+        });
+
+        // Event listener for marking a task as completed
+        taskList.addEventListener("click", function (event) {
+          const target = event.target;
+          if (target.tagName === "LI") {
+            target.classList.toggle("completed");
+          }
+        });
+
+        //prompt for completed task
+        taskList.addEventListener("click", function (event) {
+          const target = event.target;
+          if (target.tagName === "LI") {
+            const confirmDialog = confirm("Is this task completed?");
+            if (confirmDialog) {
+              target.remove();
+            }
+          }
+        });
+      </script>
+    </div>
+  </body>
+</html>

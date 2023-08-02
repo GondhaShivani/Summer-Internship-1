@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            background: rgb(15, 5, 48);
+        }
+
+        /* info box styling */
+        .info_box{
+            width: 540px;
+            background: rgb(206, 240, 210);
+            border-radius: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    
+        /* title styling */
+        .info_box .info_title{
+            height: 60px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 35px;
+            font-size: 25px;
+            font-weight: 600;
+        }
+    
+        /* content box styling */
+        .info_box .info_list{
+            padding: 15px 35px;
+            border-top: 1px solid gray;
+        }
+    
+        /* content styling */
+        .info_box .info_list .info{
+            margin: 5px 0;
+            font-size: 17px;
+        }
+    
+        /* span styling */
+        .info_box .info_list .info span{
+            font-weight: 600;
+            color: rgb(198, 5, 5);
+        }
+    
+        /* both button styling */
+        .info_box .buttons{
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 35px;
+            border-top: 1px solid gray;
+        }
+    
+        /* specific button styling */
+        .info_box .buttons button{
+            margin: 0 5px;
+            height: 35px;
+            width: 100px;
+            border: 1px solid rgb(15, 5, 48);    
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    
+        .buttons button.restart{
+            background: rgb(51, 122, 150);
+            color: rgb(255, 255, 255);
+        }
+
+        .buttons button.restart a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .buttons button.restart:hover{
+            background: rgb(66, 164, 202);
+            color: white;
+        }
+    
+        .buttons button.quit{
+            background: rgb(51, 122, 150);
+            color: rgb(255, 255, 255);
+        }
+
+        .buttons button.quit a{
+            color: white;
+            text-decoration: none;
+        }
+    
+        .buttons button.quit:hover{
+            background: rgb(66, 164, 202);
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+
+<body>    
+    <div class="info_box">
+        <!-- title -->
+        <div class="info_title">
+            <span>Some rules of this quiz</span>
+        </div>
+
+        <!-- content -->
+        <div class="info_list">
+            <div class="info">1. Each quiz consists of multiple-choice questions.
+            </div>
+            <div class="info">2. You have only <span>15 seconds</span> per each question.</div>
+            <div class="info">3. Once you select your answer. You can't reset.</div>
+            <div class="info">4. You can't select any option once time goes off.</div>
+            <div class="info">5. After answering a question, click the "Next" button to proceed to the next question.</div>
+            <div class="info">6. You'll get scores on the basis of your correct answers.</div>
+        </div>
+
+        <div class="buttons">
+            <button class="quit">
+                <a href="start.html">Exit Quiz</a>
+            </button>
+            <button class="restart">
+                <a href="index.html">Continue</a>
+            </button>
+        </div>
+    </div>
+</body>
+</html>

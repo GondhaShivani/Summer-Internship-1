@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins','sans-serif';
+    box-sizing: border-box;
+}
+/* The * selector targets all elements on the page. The styles within this block will be applied to all elements. */
+
+body{
+    background: rgb(15, 5, 48);
+}
+
+.app{
+    background: rgb(206, 240, 210);
+    width: 90%;
+    max-width: 600px;
+    margin: 150px auto 0;
+    /* 100 pixels on the top, auto horizontally (centering the element), and 0 pixels on the bottom */
+    border-radius: 10px;
+    /* 10 pixels, rounding the corners  */
+    padding: 30px;
+} 
+
+.app h1{
+    font-size: 30px; 
+    color:rgb(15, 5, 48);
+    font-weight: 600;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding-bottom: 30px;
+}
+
+.quiz{
+    padding: 20px 0;
+/*20 pixels on the top and bottom and 0 pixels on the left and right.*/
+}
+
+.quiz h2{
+    font-size: 18px; 
+    color:rgb(15, 5, 48);
+    font-weight: 600;
+}
+
+.btn{
+    background: rgb(206, 240, 210);
+    color:rgb(15, 5, 48);
+    font-size: 14px; 
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer; 
+    transition: all 0.3s;
+}
+
+/* 
+hover effect is only work while button is not disabled. */
+.btn:hover:not([disabled]){
+    background: #6f9eab;
+    color: rgb(0, 0, 0);
+}
+
+/* after select one option button is disabled(in JS) and hover is removed also cannot select any other option. */
+.btn:disabled{
+    cursor: no-drop;
+}
+
+#next-btn{
+    background: rgb(15, 5, 48);
+    color:rgb(255, 255, 255);    font-weight: 500;
+    width: 130px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer; 
+    transition: all 0.3s;
+    display: none;
+}
+
+.correct{
+    background: rgb(103, 222, 154);
+}
+
+.incorrect{
+    background: rgb(249, 94, 94);
+}
+
+.greet {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px auto 0;
+    color:rgb(0, 0, 0);
+    background-color: rgb(159, 193, 113);    
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px salmon;
+}
+
+#timer{
+    font-size: 18px;
+    font-weight: bold;
+    text-align:left;
+    margin: 5px auto 0;
+    color:rgb(248, 37, 37);
+    padding: 1px;
+    border: 1px salmon;
+}

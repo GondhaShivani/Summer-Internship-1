@@ -1,0 +1,170 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* nav.js --> style */
+
+.header{
+    padding: 30px 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.35)0px 5px 15px; 
+    /* 
+    0-horizontal offset of the shadow
+    5-vertical offset of the shadow
+    15-the blur radius of the shadow */
+}
+
+.header .logo h2{
+    color: rgb(19, 167, 226);
+    cursor: pointer;
+    font-size: 32px;
+}
+
+.header .logo h2 span{
+    color: red; 
+}
+
+.header ul{
+    display: flex;
+}
+
+.header ul li{
+    margin-right: 20px;
+    list-style: none;
+}
+
+.header ul li .link{
+    text-decoration: none;
+    color: rgb(19, 167, 226);
+}
+
+
+/* product.js --> style */
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 10px 30px;
+}
+
+.container .box{
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    margin-top: 20px;
+    background: rgb(240, 239, 239);
+    padding: 10px 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.container .box .contant{
+    align-items: center;
+    max-width: 100%;
+}
+
+.container .box .contant .img-box img{
+    width: 250px;
+    height: 250px;
+}
+
+.container .box .contant .detail .info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.container .box .contant .detail .info h3{
+    text-transform: uppercase;
+    font-weight: 200;
+    color: red;
+}
+
+.container .box .contant .detail button{
+    margin-top: 30px;
+    margin-left: 30%;
+    padding: 10px 30px;
+    border: none;
+    background: rgb(19, 167, 226);
+    color: white;
+    cursor: pointer;
+}
+
+.detail_container{
+    position: fixed;
+    z-index: 1;
+    align-items: center;
+    width: 900px;
+    background: rgb(240, 239, 239);
+    margin-left: 275px;
+    margin-top: 199px;
+    box-shadow: rgba(0, 0, 0, 0.35)0px 5px 15px;
+    border: 1px solid rgb(255, 255, 255); 
+    padding: 20px 30px;
+    border-radius: 5px ;
+}
+
+.detail_container .detail_contant{
+    max-width: 100%;
+}
+
+.detail_container .detail_contant .close{
+    border: none;
+    outline: none;
+    background-color: none;
+    cursor: pointer;
+}
+
+.detail_container .detail_contant .detail_info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.detail_container .detail_contant .detail_info .img_box img{
+    width: 250px;
+    height: 250px;
+}
+
+.detail_container .detail_contant .product_detail{
+    margin-left: 30px;
+}
+
+.detail_container .detail_contant .detail_info .product_detail h2
+{
+    color: rgb(9, 173, 238);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.detail_container .detail_contant .detail_info .product_detail h3{
+    margin-top: 10px;
+    color: #fe4a55;
+}
+
+.detail_container .detail_contant .detail_info .product_detail p{
+    margin-top: 10px;
+    margin-right: 30px;
+    color: #777171;
+} 
+
+.detail_container .detail_contant .detail_info .product_detail button{
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background: none;
+    background: #fe4a55;
+    color: black;
+    cursor: pointer;
+}
+
